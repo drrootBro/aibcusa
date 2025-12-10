@@ -4,26 +4,42 @@
   <meta charset="UTF-8" />
   <title>AIBC International LLC – AI Productivity Tools</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      color: #0a1f44;
+      color: #1a2b4c;
       background: #ffffff;
     }
 
-    h2 {
-      font-size: 2.4rem;
-      font-weight: 700;
-    }
-
-    /* Smooth scroll */
     html {
       scroll-behavior: smooth;
     }
 
-    /* Hero Section */
+    /* NAVIGATION */
+    .nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+
+    .nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #1a2b4c;
+    }
+
     .hero {
       height: 90vh;
       background-image: url('https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=2000&q=80');
@@ -32,7 +48,8 @@
       display: flex;
       align-items: center;
       padding-left: 8%;
-      color: white;
+      color: #1a2b4c; /* 深色字体 */
+      padding-top: 60px; /* 让 hero 不被导航挡住 */
     }
 
     .hero h1 {
@@ -45,43 +62,40 @@
       font-size: 1.3rem;
       line-height: 1.6;
       margin-bottom: 2rem;
-      max-width: 580px;
+      max-width: 520px;
     }
 
     .btn-primary {
-      background: #4e8fff;
+      background: #2459ff;
       padding: 12px 28px;
       border-radius: 8px;
-      color: white;
+      color: white !important;
       text-decoration: none;
       font-weight: 600;
       margin-right: 12px;
     }
 
     .btn-outline {
-      border: 1px solid white;
-      padding: 12px 28px;
+      border: 2px solid #1a2b4c;
+      padding: 10px 26px;
       border-radius: 8px;
-      color: white;
+      color: #1a2b4c !important;
       text-decoration: none;
       font-weight: 600;
     }
 
-    /* Shared section spacing */
     .section {
       padding: 80px 10%;
       max-width: 1100px;
       margin: auto;
     }
 
-    /* Products Grid */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 40px;
     }
 
-    /* About Background */
     .about-bg {
       background: #f7f9fc;
     }
@@ -90,10 +104,24 @@
 
 <body>
 
+  <!-- NAVIGATION -->
+  <div class="nav">
+    <div style="font-size: 1.4rem; font-weight: 700; color:#1a2b4c;">
+      AIBC / RootBro
+    </div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
   <!-- HERO SECTION -->
-  <div class="hero">
+  <div class="hero" id="home">
     <div>
       <h1>Build Smarter. Work Faster.</h1>
+
       <p>
         AI-powered tools for writing, data, learning, and knowledge management —
         built with privacy, simplicity, and speed in mind.
@@ -107,47 +135,99 @@
   <!-- PRODUCTS -->
   <section id="products" class="section">
     <h2>Products & Features</h2>
+
     <div class="grid" style="margin-top: 40px;">
 
       <div>
-        <h3 style="font-size:1.6rem; font-weight:600;">AI-Draft for Microsoft Word</h3>
-        <p style="line-height:1.6; margin-top:12px;">
-          A professional AI writing assistant for Microsoft Word.<br>
+        <h3>AI-Draft for Microsoft Word</h3>
+        <p>
+          AI writing assistant for Microsoft Word.<br>
           • Lifetime license<br>
           • BYOK (OpenAI & Gemini)<br>
-          • Privacy-first, no data stored<br>
-          • Works on Windows, Mac, and Word Online
+          • Privacy-first<br>
+          • Windows / Mac / Word Online
         </p>
       </div>
 
       <div>
-        <h3 style="font-size:1.6rem; font-weight:600;">AI-Draft for Google Docs™</h3>
-        <p style="line-height:1.6; margin-top:12px;">
-          A lightweight writing assistant for Google Docs™.<br>
+        <h3>AI-Draft for Google Docs™</h3>
+        <p>
+          Lightweight AI writing for Google Docs™.<br>
+          • Rewrite / Translate / Summarize<br>
           • Uses your own API keys<br>
-          • Real-time rewrite, translate, summarize<br>
-          • Zero retention, education-friendly
+          • Zero retention
         </p>
       </div>
 
       <div>
-        <h3 style="font-size:1.6rem; font-weight:600;">AI Keeper – Chrome Extension</h3>
-        <p style="line-height:1.6; margin-top:12px;">
-          A personal knowledge capture tool for ChatGPT, Claude, Gemini, and more.<br>
-          • Local-first, no cloud<br>
-          • Organize & search saved AI outputs<br>
-          • Export to CSV / Markdown / Sheets (Pro)
+        <h3>AI Keeper – Chrome Extension</h3>
+        <p>
+          Local AI knowledge capture.<br>
+          • Works with GPT / Claude / Gemini<br>
+          • Local database<br>
+          • Export CSV / Markdown / Sheets
         </p>
       </div>
 
       <div>
-        <h3 style="font-size:1.6rem; font-weight:600;">AI for Excel (Coming Soon)</h3>
-        <p style="line-height:1.6; margin-top:12px;">
-          A practical AI assistant for Excel users.<br>
-          • Explain formulas in plain English<br>
-          • Generate formulas from natural language<br>
-          • Data cleaning assistance<br>
-          • BYOK with enterprise-friendly options
+        <h3>AI for Excel (Coming Soon)</h3>
+        <p>
+          AI assistant for formulas & data cleaning.<br>
+          • Explain formulas<br>
+          • Generate formulas<br>
+          • Enterprise privacy
+        </p>
+      </div>
+
+      <!-- FUTURE PRODUCTS -->
+
+      <div>
+        <h3>AI Language Tutor</h3>
+        <p>
+          Personalized bilingual learning system.<br>
+          • Story-based generation<br>
+          • Pinyin + English support<br>
+          • Speech practice (TTS)
+        </p>
+      </div>
+
+      <div>
+        <h3>RootBro Chinese Learning Engine</h3>
+        <p>
+          AI-powered Chinese learning tools for overseas students.<br>
+          • Vocabulary engine<br>
+          • Grammar explanations<br>
+          • Reading & pronunciation AI
+        </p>
+      </div>
+
+      <div>
+        <h3>TCM Acupuncture Intelligence</h3>
+        <p>
+          AI tools for Traditional Chinese Medicine learners.<br>
+          • Symptom → Acupoint mapping<br>
+          • Formula & herb knowledge base<br>
+          • Classical text search
+        </p>
+      </div>
+
+      <div>
+        <h3>AI Voice Studio</h3>
+        <p>
+          XTTS + Whisper based voice tools.<br>
+          • Voice cloning<br>
+          • Narration<br>
+          • Offline + cloud
+        </p>
+      </div>
+
+      <div>
+        <h3>AI Video & Subtitle Tools</h3>
+        <p>
+          Tools for creators & educators.<br>
+          • Auto subtitles from MP3<br>
+          • Batch video processing<br>
+          • Course content automation
         </p>
       </div>
 
@@ -159,35 +239,22 @@
     <h2>About AIBC International LLC</h2>
 
     <p style="font-size:1.15rem; line-height:1.8; margin-top: 24px;">
-      AIBC International LLC (operating under the RootBro Software brand) is an independent
-      software studio based in Ithaca, USA. We build practical, lightweight, and privacy-first
-      AI tools for knowledge workers, creators, students, and professionals around the world.
+      AIBC International LLC (RootBro Software) is an independent software studio
+      based in Ithaca, USA. We build practical, lightweight, and privacy-first
+      AI tools for knowledge workers, creators, and students.
     </p>
 
     <p style="font-size:1.15rem; line-height:1.8;">
       Our philosophy is simple:
-      <strong>AI should make work faster without increasing complexity or sacrificing control.</strong>
-      We design tools that are affordable, transparent, lifetime-licensed, and powered by your
-      own API keys (BYOK).
+      <strong>AI should make life easier — not more complicated.</strong>
+      We design tools that are stable, minimal, lifetime-licensed, and powered
+      by user-controlled API keys (BYOK).
     </p>
 
     <p style="font-size:1.15rem; line-height:1.8;">
-      Our founder, Mark Cui, focuses on building tools that solve real, personal pain points:
-      writing workflows, knowledge management, spreadsheet productivity, bilingual Chinese
-      learning tools, and AI-enhanced natural health frameworks. These ideas are unified by a
-      single mission: <strong>help people think better, work faster, and learn more effectively using
-      human-centered AI.</strong>
-    </p>
-
-    <p style="font-size:1.15rem; line-height:1.8;">
-      AIBC is developing a connected ecosystem of AI productivity tools across Word, Excel,
-      Google Workspace, Chrome, education apps, and creator utilities. Each product shares the
-      same principles: minimal setup, no lock-in, privacy-first, and practical usefulness.
-    </p>
-
-    <p style="font-size:1.15rem; line-height:1.8;">
-      We believe the future of AI belongs not to large monolithic platforms, but to small,
-      flexible tools that empower individuals. AIBC is building that future.
+      Our founder, Mark Cui, builds software that solves real personal problems:
+      writing workflows, AI knowledge organizing, language learning, Excel
+      automation, TCM knowledge systems, and creator productivity tools.
     </p>
   </section>
 
@@ -195,20 +262,11 @@
   <section id="contact" class="section">
     <h2>Contact</h2>
 
-    <p style="font-size:1.15rem; line-height:1.8; margin-top: 24px;">
-      For support, partnerships, or general inquiries:
+    <p style="margin-top:20px; font-size:1.15rem;">
+      <strong>Email:</strong> support@aibcinternational.com
     </p>
-
-    <p style="font-size:1.15rem; margin-top:16px;">
-      <strong>Email:</strong> support@aibcusa.com
-    </p>
-
-    <p style="font-size:1.15rem; margin-top:4px;">
-      <strong>Business:</strong> partner@aibcusa.com
-    </p>
-
-    <p style="font-size:1.15rem; margin-top:4px;">
-      <strong>Website:</strong> rootbro.com
+    <p style="font-size:1.15rem;">
+      <strong>Business:</strong> partner@aibcinternational.com
     </p>
   </section>
 
