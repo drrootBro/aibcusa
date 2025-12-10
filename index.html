@@ -2,125 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AIBC International LLC – AI Productivity Tools</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIBC / RootBro – AI Productivity Tools</title>
 
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       color: #1a2b4c;
       background: #ffffff;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* NAVIGATION */
+    /* ---------------- Navigation ---------------- */
     .nav {
       width: 100%;
       position: fixed;
       top: 0;
       left: 0;
-      padding: 16px 5%; /* 修复导航宽度问题 */
+      padding: 16px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(8px);
-      z-index: 10;
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(12px);
+      z-index: 20;
     }
 
-    .nav-links {
-      white-space: nowrap;  /* 不换行 */
-      overflow-x: auto;     /* 小屏幕可滚动 */
+    .nav-right {
+      white-space: nowrap;
+      overflow-x: auto;
     }
 
     .nav a {
-      margin-left: 20px;
+      margin-left: 24px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
       color: #1a2b4c;
+      font-size: 1rem;
     }
 
-    /* HERO SECTION */
+    /* ---------------- Hero Section ---------------- */
     .hero {
-      height: 90vh;
-      background-image: url('https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=2000&q=80');
+      width: 100%;
+      height: 82vh;
+      background-image: url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg");
       background-size: cover;
       background-position: center;
       display: flex;
       align-items: center;
-      padding-left: 8%;
-      padding-top: 70px; /* 避免被导航挡住 */
-      color: #1a2b4c; /* 深色字体 */
+      padding: 0 5%;
+      text-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .hero-content {
+      max-width: 560px;
     }
 
     .hero h1 {
       font-size: 3.2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
+      margin-bottom: 12px;
+      color: #0a1f44;
     }
 
     .hero p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       line-height: 1.6;
-      margin-bottom: 2rem;
-      max-width: 540px;
+      color: #243b63;
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+
+    /* Remove AIBC tag on mobile */
+    .section-tag {
+      font-weight: 600;
+      font-size: 1rem;
+      color: #233a72;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 640px) {
+      .section-tag {
+        display: none;
+      }
+    }
+
+    /* ---------------- Buttons ---------------- */
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
     }
 
     .btn-primary {
-      background: #2459ff;
-      padding: 12px 28px;
-      border-radius: 8px;
-      color: white !important;
-      text-decoration: none;
+      background: #0a57ff;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 1rem;
       font-weight: 600;
-      margin-right: 12px;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .btn-outline {
+      padding: 14px 28px;
       border: 2px solid #1a2b4c;
-      padding: 10px 26px;
-      border-radius: 8px;
-      color: #1a2b4c !important;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
+      color: #1a2b4c;
+      font-size: 1rem;
+      display: inline-block;
     }
 
-    /* GENERAL SECTION */
-    .section {
-      padding: 80px 10%;
-      max-width: 1100px;
-      margin: auto;
+    @media (max-width: 640px) {
+      .hero-buttons a {
+        width: 100%;
+        text-align: center;
+      }
     }
 
-    /* PRODUCTS GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+    /* ---------------- Footer ---------------- */
+    footer {
+      padding: 40px 5%;
+      text-align: center;
+      color: #5a6b88;
+      font-size: 0.9rem;
     }
 
-    /* ABOUT SECTION */
-    .about-bg {
-      background: #f7f9fc;
+    footer a {
+      color: #0a57ff;
+      text-decoration: none;
+      font-weight: 600;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- Navigation -->
   <div class="nav">
-    <div style="font-size: 1.4rem; font-weight: 700; color:#1a2b4c;">
-      AIBC / RootBro
+    <div style="font-size: 1.4rem; font-weight: 700;">
+      AIBC / <a href="https://rootbro.com" target="_blank" style="text-decoration:none;color:#1a2b4c;">RootBro</a>
     </div>
 
-    <div class="nav-links">
+    <div class="nav-right">
       <a href="#home">Home</a>
       <a href="#products">Products</a>
       <a href="#about">About</a>
@@ -128,158 +154,53 @@
     </div>
   </div>
 
-  <!-- HERO -->
-  <div class="hero" id="home">
-    <div>
-      <h1>Build Smarter. Work Faster.</h1>
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="section-tag">AIBC</div>
+
+      <h1>Build Smarter.<br>Work Faster.</h1>
 
       <p>
-        AI-powered tools for writing, data, learning, and knowledge management —
-        built with privacy, simplicity, and speed in mind.
+        AI-powered tools for writing, data, learning, and knowledge management —  
+        crafted with privacy, simplicity, and speed in mind.
       </p>
 
-      <a href="#products" class="btn-primary">Explore Products</a>
-      <a href="#about" class="btn-outline">Learn About AIBC</a>
-    </div>
-  </div>
-
-  <!-- PRODUCTS -->
-  <section id="products" class="section">
-    <h2>Products & Features</h2>
-
-    <div class="grid" style="margin-top: 40px;">
-
-      <!-- Existing Products -->
-      <div>
-        <h3>AI-Draft for Microsoft Word</h3>
-        <p>
-          AI writing assistant for Microsoft Word.<br>
-          • Lifetime license<br>
-          • BYOK (OpenAI & Gemini)<br>
-          • Privacy-first<br>
-          • Windows / Mac / Word Online
-        </p>
+      <div class="hero-buttons">
+        <a href="#products" class="btn-primary">Explore Products</a>
+        <a href="#about" class="btn-outline">Learn About</a>
       </div>
-
-      <div>
-        <h3>AI-Draft for Google Docs™</h3>
-        <p>
-          Lightweight AI writing for Google Docs™.<br>
-          • Rewrite / Translate / Summarize<br>
-          • Uses your own API keys<br>
-          • Zero retention
-        </p>
-      </div>
-
-      <div>
-        <h3>AI Keeper – Chrome Extension</h3>
-        <p>
-          Local AI knowledge capture.<br>
-          • GPT / Claude / Gemini<br>
-          • Local database<br>
-          • Export CSV / Markdown / Sheets
-        </p>
-      </div>
-
-      <div>
-        <h3>AI for Excel (Coming Soon)</h3>
-        <p>
-          AI assistant for formulas & data cleaning.<br>
-          • Explain formulas<br>
-          • Generate formulas<br>
-          • Enterprise privacy
-        </p>
-      </div>
-
-      <!-- Future Products -->
-      <div>
-        <h3>AI Language Tutor</h3>
-        <p>
-          Personalized bilingual learning system.<br>
-          • Story-based learning<br>
-          • Pinyin + English<br>
-          • TTS conversation mode
-        </p>
-      </div>
-
-      <div>
-        <h3>RootBro Chinese Learning Engine</h3>
-        <p>
-          AI-powered Chinese learning tools.<br>
-          • Vocabulary engine<br>
-          • Grammar explanations<br>
-          • Reading + pronunciation AI
-        </p>
-      </div>
-
-      <div>
-        <h3>TCM Acupuncture Intelligence</h3>
-        <p>
-          AI tools for Traditional Chinese Medicine learners.<br>
-          • Symptom → Acupoint mapping<br>
-          • Formula & herb db<br>
-          • Classical text search
-        </p>
-      </div>
-
-      <div>
-        <h3>AI Voice Studio</h3>
-        <p>
-          Voice & TTS tools based on XTTS & Whisper.<br>
-          • Voice cloning<br>
-          • Narration<br>
-          • Offline + cloud
-        </p>
-      </div>
-
-      <div>
-        <h3>AI Video & Subtitle Tools</h3>
-        <p>
-          Tools for creators & educators.<br>
-          • Auto subtitles from MP3<br>
-          • Batch video pipeline<br>
-          • Course automation
-        </p>
-      </div>
-
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section about-bg">
-    <h2>About AIBC International LLC</h2>
+  <!-- Placeholder Sections -->
+  <section id="products" style="padding:80px 5%;">
+    <h2>Products</h2>
+    <p>AI-Draft for Word, AI-Draft for Google Docs, AI-Keeper Chrome Extension, Excel AI Add-in, TTS Tools, Chinese Learning Assistant, and more.</p>
+  </section>
 
-    <p style="font-size:1.15rem; line-height:1.8; margin-top: 24px;">
-      AIBC International LLC (RootBro Software) is an independent software studio 
-      based in Ithaca, USA. We build practical, lightweight, and privacy-first 
-      AI tools for professionals, students, and creators.
+  <section id="about" style="padding:80px 5%;">
+    <h2>About</h2>
+    <p>
+      AIBC International LLC builds practical AI tools that empower individuals and teams to work smarter.  
+      From Office add-ins to intelligent TTS and learning assistants, our mission is to create lightweight,  
+      high-impact tools with world-class privacy and performance.
     </p>
 
-    <p style="font-size:1.15rem; line-height:1.8;">
-      Our philosophy: <strong>AI should make life easier — not more complicated.</strong>
-      We focus on stable, minimal, lifetime-licensed tools powered by 
-      user-controlled API keys (BYOK).
-    </p>
-
-    <p style="font-size:1.15rem; line-height:1.8;">
-      Our founder, Mark Cui, creates tools that solve real personal problems:
-      writing automation, AI knowledge management, bilingual learning,
-      Excel productivity, TCM knowledge indexing, and audio/video automation.
+    <p>
+      RootBro is our consumer-facing creative brand, focusing on education, language learning, Chinese medicine knowledge systems,  
+      and AI-driven writing tools.
     </p>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
+  <section id="contact" style="padding:80px 5%;">
     <h2>Contact</h2>
-
-    <p style="margin-top:20px; font-size:1.15rem;">
-      <strong>Email:</strong> support@aibcinternational.com
-    </p>
-
-    <p style="font-size:1.15rem;">
-      <strong>Business:</strong> partner@aibcinternational.com
-    </p>
+    <p>Email: contact@aibcusa.com</p>
   </section>
+
+  <footer>
+    © 2025 AIBC International LLC — Built by <a href="https://rootbro.com" target="_blank">RootBro</a>
+  </footer>
 
 </body>
 </html>
