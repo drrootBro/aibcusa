@@ -110,35 +110,26 @@
       background: #f7f9fc;
     }
     /* ============================================
-   MOBILE FIXES — DO NOT CHANGE OTHER CONTENT
-   ============================================ */
+       Mobile final button fix
+       ============================================ */
     
-    /* Make hero buttons wrap properly on mobile */
     @media (max-width: 640px) {
-      .hero a {
+    
+      /* Let the hero section center content better */
+      .hero {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+      }
+    
+      /* Prevent buttons from exceeding screen width */
+      .hero a.btn-primary,
+      .hero a.btn-outline {
         display: block;
         width: 100%;
-        margin-bottom: 12px;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 14px;
         text-align: center;
-      }
-    }
-    
-    /* Ensure hero text area doesn't overflow */
-    @media (max-width: 640px) {
-      .hero h1 {
-        font-size: 2.2rem !important;
-        line-height: 1.2;
-      }
-    
-      .hero p {
-        font-size: 1.1rem !important;
-      }
-    }
-    
-    /* Prevent any accidental overlapping */
-    @media (max-width: 640px) {
-      .hero > div {
-        max-width: 90%;
       }
     }
 
@@ -150,7 +141,7 @@
   <!-- NAVIGATION -->
   <div class="nav">
     <div style="font-size: 1.4rem; font-weight: 700; color:#1a2b4c;">
-      AIBC / <a href="https://rootbro.com" target="_blank" style="color:#1a2b4c; text-decoration:none;">RootBro</a>
+      AIBC / <a href="https://rootbro.com" style="color:#1a2b4c; text-decoration:none;">RootBro</a>
     </div>
 
     <div class="nav-links">
@@ -184,7 +175,7 @@
 
       <!-- Existing Products -->
       <div>
-        <h3>AI-Draft for Microsoft Word</h3>
+        <h3><a href="rootbro.com">AI-Draft for Microsoft Word</h3>
         <p>
           AI writing assistant for Microsoft Word.<br>
           • Lifetime license<br>
@@ -195,7 +186,7 @@
       </div>
 
       <div>
-        <h3>AI-Draft for Google Docs™</h3>
+        <h3><a href="rootbro.com">AI-Draft for Google Docs™</h3>
         <p>
           Lightweight AI writing for Google Docs™.<br>
           • Rewrite / Translate / Summarize<br>
@@ -283,8 +274,8 @@
     <h2>About AIBC International LLC</h2>
 
     <p style="font-size:1.15rem; line-height:1.8; margin-top: 24px;">
-      AIBC International LLC (RootBro Software) is an independent software studio 
-      based in Ithaca, USA. We build practical, lightweight, and privacy-first 
+      AIBC International LLC (RootBro Software) is an independent software 
+      based in Ithaca, New York , USA. We build practical, lightweight, and privacy-first 
       AI tools for professionals, students, and creators.
     </p>
 
@@ -295,7 +286,7 @@
     </p>
 
     <p style="font-size:1.15rem; line-height:1.8;">
-      Our founder, Mark Cui, creates tools that solve real personal problems:
+      We creates tools that solve real personal problems:
       writing automation, AI knowledge management, bilingual learning,
       Excel productivity, TCM knowledge indexing, and audio/video automation.
     </p>
@@ -306,11 +297,11 @@
     <h2>Contact</h2>
 
     <p style="margin-top:20px; font-size:1.15rem;">
-      <strong>Email:</strong> support@aibcinternational.com
+      <strong>Email:</strong> admin@aibcusa.com
     </p>
 
     <p style="font-size:1.15rem;">
-      <strong>Business:</strong> partner@aibcinternational.com
+      <strong>Business:</strong> partner@aibcusa.com
     </p>
   </section>
 
