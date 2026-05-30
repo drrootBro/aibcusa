@@ -2,20 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AIBC International LLC – AI Productivity Tools</title>
+  <title>AIBC International LLC – AI Software Company</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AIBC International LLC develops practical, privacy-first AI software for productivity, learning, knowledge management, and content creation." />
 
   <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      color: #1a2b4c;
-      background: #ffffff;
+    :root {
+      --primary: #1a2b4c;
+      --accent: #2459ff;
+      --bg-soft: #f7f9fc;
+      --border: #e5eaf2;
+      --text-muted: #5f6f89;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      color: var(--primary);
+      background: #ffffff;
+    }
+
+    a {
+      color: inherit;
     }
 
     /* NAVIGATION */
@@ -24,18 +41,32 @@
       position: fixed;
       top: 0;
       left: 0;
-      padding: 16px 5%; /* 修复导航宽度问题 */
+      padding: 16px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(229, 234, 242, 0.8);
       z-index: 10;
     }
 
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
     .nav-links {
-      white-space: nowrap;  /* 不换行 */
-      overflow-x: auto;     /* 小屏幕可滚动 */
+      white-space: nowrap;
+      overflow-x: auto;
+      padding-left: 20px;
     }
 
     .nav a {
@@ -43,227 +74,339 @@
       text-decoration: none;
       font-weight: 600;
       font-size: 0.95rem;
-      color: #1a2b4c;
+      color: var(--primary);
     }
 
     /* HERO SECTION */
     .hero {
-      height: 90vh;
-      background-image: url('https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=2000&q=80');
+      min-height: 88vh;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.88) 46%, rgba(255,255,255,0.35) 100%),
+        url('https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=2000&q=80');
       background-size: cover;
       background-position: center;
       display: flex;
       align-items: center;
-      padding-left: 8%;
-      padding-top: 70px; /* 避免被导航挡住 */
-      color: #1a2b4c; /* 深色字体 */
+      padding: 110px 8% 70px;
+      color: var(--primary);
+    }
+
+    .hero-content {
+      max-width: 660px;
     }
 
     .hero h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
+      font-size: clamp(2.4rem, 5vw, 4.1rem);
+      line-height: 1.08;
+      font-weight: 750;
+      margin: 0 0 1rem;
+      letter-spacing: -0.03em;
     }
 
     .hero p {
-      font-size: 1.3rem;
-      line-height: 1.6;
-      margin-bottom: 2rem;
-      max-width: 540px;
+      font-size: 1.25rem;
+      line-height: 1.65;
+      margin: 0 0 2rem;
+      max-width: 620px;
+      color: #2f405f;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-outline {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
     }
 
     .btn-primary {
-      background: #2459ff;
-      padding: 12px 28px;
-      border-radius: 8px;
+      background: var(--accent);
       color: white !important;
-      text-decoration: none;
-      font-weight: 600;
-      margin-right: 12px;
+      border: 2px solid var(--accent);
     }
 
     .btn-outline {
-      border: 2px solid #1a2b4c;
-      padding: 10px 26px;
-      border-radius: 8px;
-      color: #1a2b4c !important;
-      text-decoration: none;
-      font-weight: 600;
+      border: 2px solid var(--primary);
+      color: var(--primary) !important;
+      background: rgba(255,255,255,0.55);
     }
 
     /* GENERAL SECTION */
     .section {
       padding: 80px 10%;
-      max-width: 1100px;
+      max-width: 1180px;
       margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin: 0 0 34px;
+    }
+
+    .subheading {
+      margin: 52px 0 22px;
+      font-size: 1.25rem;
+      color: var(--primary);
     }
 
     /* PRODUCTS GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+      gap: 24px;
+    }
+
+    .card {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 8px 22px rgba(26, 43, 76, 0.04);
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 1.16rem;
+    }
+
+    .card p {
+      margin: 0;
+      line-height: 1.7;
+      color: #43536e;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #eef3ff;
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
     }
 
     /* ABOUT SECTION */
     .about-bg {
-      background: #f7f9fc;
-    }
-    /* ============================================
-       Mobile final button fix
-       ============================================ */
-    
-    @media (max-width: 640px) {
-    
-      /* Let the hero section center content better */
-      .hero {
-        padding-left: 5% !important;
-        padding-right: 5% !important;
-      }
-    
-      /* Prevent buttons from exceeding screen width */
-      .hero a.btn-primary,
-      .hero a.btn-outline {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        margin-bottom: 14px;
-        text-align: center;
-      }
+      background: var(--bg-soft);
+      max-width: none;
     }
 
+    .about-inner {
+      max-width: 980px;
+      margin: auto;
+    }
+
+    .about-inner p {
+      font-size: 1.12rem;
+      line-height: 1.85;
+      color: #35465f;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .principle {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      font-weight: 700;
+    }
+
+    /* CONTACT */
+    .contact-box {
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #ffffff;
+      max-width: 720px;
+      box-shadow: 0 8px 22px rgba(26, 43, 76, 0.04);
+    }
+
+    .contact-box p {
+      margin: 12px 0;
+      font-size: 1.08rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 32px 10%;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        padding-left: 0;
+        width: 100%;
+      }
+
+      .nav a {
+        margin-left: 0;
+        margin-right: 18px;
+      }
+
+      .hero {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+
+      .actions a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .section {
+        padding: 64px 6%;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <!-- NAVIGATION -->
-  <div class="nav">
-    <div style="font-size: 1.4rem; font-weight: 700; color:#1a2b4c;">
-      AIBC / <a href="https://rootbro.com" style="color:#1a2b4c; text-decoration:none;">RootBro</a>
+  <header class="nav">
+    <div class="brand">
+      AIBC International LLC <span>/ RootBro Software</span>
     </div>
 
-    <div class="nav-links">
+    <nav class="nav-links" aria-label="Main navigation">
       <a href="#home">Home</a>
       <a href="#products">Products</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-    </div>
-  </div>
+    </nav>
+  </header>
 
   <!-- HERO -->
-  <div class="hero" id="home">
-    <div>
-      <h1>Build Smarter. Work Faster.</h1>
+  <main class="hero" id="home">
+    <div class="hero-content">
+      <h1>Practical AI Software for Productivity and Learning.</h1>
 
       <p>
-        AI-powered tools for writing, data, learning, and knowledge management —
-        built with privacy, simplicity, and speed in mind.
+        AIBC International LLC develops privacy-first AI software for professionals,
+        students, educators, and creators. Our products focus on writing, knowledge
+        management, learning, and content creation — designed to be simple,
+        practical, and user-controlled.
       </p>
 
-      <a href="#products" class="btn-primary">Explore Products</a>
-      <a href="#about" class="btn-outline">Learn About AIBC</a>
+      <div class="actions">
+        <a href="#products" class="btn-primary">Explore Products</a>
+        <a href="#about" class="btn-outline">About AIBC</a>
+      </div>
     </div>
-  </div>
+  </main>
 
   <!-- PRODUCTS -->
   <section id="products" class="section">
-    <h2>Products & Features</h2>
+    <h2>Products</h2>
+    <p class="section-intro">
+      We build lightweight AI tools that help users write, organize knowledge,
+      learn languages, and create content with more control over their workflow.
+    </p>
 
-    <div class="grid" style="margin-top: 40px;">
+    <h3 class="subheading">Available Products</h3>
+    <div class="grid">
 
-      <!-- Existing Products -->
-      <div>
-        <a href="https://rootbro.com/ai-draft" style="color:#1a2b4c; text-decoration:none;"><h3>AI-Draft for Microsoft Word</h3></a>
+      <div class="card">
+        <span class="badge">Available</span>
+        <a href="https://rootbro.com/ai-draft"><h3>AI-Draft for Microsoft Word</h3></a>
         <p>
           AI writing assistant for Microsoft Word.<br>
-          • Lifetime license<br>
-          • BYOK (OpenAI & Gemini)<br>
-          • Privacy-first<br>
-          • Windows / Mac / Word Online
+          • Rewrite, summarize, translate, and draft<br>
+          • Bring Your Own Key (OpenAI & Gemini)<br>
+          • Privacy-first workflow<br>
+          • Windows, Mac, and Word Online support
         </p>
       </div>
 
-      <div>
-        <a href="https://rootbro.com/docs-ai" style="color:#1a2b4c; text-decoration:none;"><h3>AI-Draf for Google Docs™</h3></a>
-      
+      <div class="card">
+        <span class="badge">Available</span>
+        <a href="https://rootbro.com/docs-ai"><h3>AI-Draft for Google Docs™</h3></a>
         <p>
-          Lightweight AI writing for Google Docs™.<br>
-          • Rewrite / Translate / Summarize<br>
-          • Uses your own API keys<br>
-          • Zero retention
+          Lightweight AI writing assistant for Google Docs™.<br>
+          • Rewrite, translate, and summarize<br>
+          • Uses user-controlled API keys<br>
+          • Designed for simple document workflows<br>
+          • No unnecessary complexity
         </p>
       </div>
 
-      <div>
+      <div class="card">
+        <span class="badge">Available</span>
         <h3>AI Keeper – Chrome Extension</h3>
         <p>
-          Local AI knowledge capture.<br>
-          • GPT / Claude / Gemini<br>
-          • Local database<br>
-          • Export CSV / Markdown / Sheets
+          Local AI knowledge capture for researchers and creators.<br>
+          • Save useful AI responses<br>
+          • Organize knowledge locally<br>
+          • Export to CSV, Markdown, or spreadsheets<br>
+          • Built for personal knowledge management
         </p>
       </div>
 
-      <div>
-        <h3>AI for Excel (Coming Soon)</h3>
+    </div>
+
+    <h3 class="subheading">Products in Development</h3>
+    <div class="grid">
+
+      <div class="card">
+        <span class="badge">In Development</span>
+        <h3>Language Learning Tools</h3>
         <p>
-          AI assistant for formulas & data cleaning.<br>
-          • Explain formulas<br>
-          • Generate formulas<br>
-          • Enterprise privacy
+          AI-assisted tools for bilingual learning, vocabulary practice,
+          pronunciation support, and personalized study workflows.
         </p>
       </div>
 
-      <!-- Future Products -->
-      <div>
-        <h3>AI Language Tutor</h3>
+      <div class="card">
+        <span class="badge">In Development</span>
+        <h3>Voice & Subtitle Tools</h3>
         <p>
-          Personalized bilingual learning system.<br>
-          • Story-based learning<br>
-          • Pinyin + English<br>
-          • TTS conversation mode
+          Creator tools for audio transcription, subtitle generation,
+          narration support, and educational media production.
         </p>
       </div>
 
-      <div>
-        <h3> Chinese Learning Engine</h3>
+      <div class="card">
+        <span class="badge">In Development</span>
+        <h3>Knowledge Management Systems</h3>
         <p>
-          AI-powered Chinese learning tools.<br>
-          • Vocabulary engine<br>
-          • Grammar explanations<br>
-          • Reading + pronunciation AI
-        </p>
-      </div>
-
-      <div>
-        <h3>TCM Acupuncture Intelligence</h3>
-        <p>
-          AI tools for Traditional Chinese Medicine learners.<br>
-          • Symptom → Acupoint mapping<br>
-          • Formula & herb db<br>
-          • Classical text search
-        </p>
-      </div>
-
-      <div>
-        <h3>AI Voice Studio</h3>
-        <p>
-          Voice & TTS tools based on XTTS & Whisper.<br>
-          • Voice cloning<br>
-          • Narration<br>
-          • Offline + cloud
-        </p>
-      </div>
-
-      <div>
-        <h3>AI Video & Subtitle Tools</h3>
-        <p>
-          Tools for creators & educators.<br>
-          • Auto subtitles from MP3<br>
-          • Batch video pipeline<br>
-          • Course automation
+          Practical systems for capturing, organizing, and reusing AI-assisted
+          research, notes, and structured knowledge.
         </p>
       </div>
 
@@ -272,42 +415,56 @@
 
   <!-- ABOUT -->
   <section id="about" class="section about-bg">
-    <h2>About AIBC International LLC</h2>
+    <div class="about-inner">
+      <h2>About AIBC International LLC</h2>
 
-    <p style="font-size:1.15rem; line-height:1.8; margin-top: 24px;">
-      AIBC International LLC (RootBro Software) is an independent software 
-      based in Ithaca, New York , USA. We build practical, lightweight, and privacy-first 
-      AI tools for professionals, students, and creators.
-    </p>
+      <p>
+        AIBC International LLC is an independent software company based in
+        New York, United States.
+      </p>
 
-    <p style="font-size:1.15rem; line-height:1.8;">
-      Our philosophy: <strong>AI should make life easier — not more complicated.</strong>
-      We focus on stable, minimal, lifetime-licensed tools powered by 
-      user-controlled API keys (BYOK).
-    </p>
+      <p>
+        We develop practical AI-powered software focused on productivity,
+        knowledge management, learning, and content creation. Our mission is to
+        make advanced AI technology accessible through simple, privacy-first,
+        and user-controlled software.
+      </p>
 
-    <p style="font-size:1.15rem; line-height:1.8;">
-      We creates tools that solve real personal problems:
-      writing automation, AI knowledge management, bilingual learning,
-      Excel productivity, TCM knowledge indexing, and audio/video automation.
-    </p>
+      <p>
+        We prioritize lightweight tools, clear user workflows, lifetime licensing
+        options where appropriate, and Bring Your Own Key (BYOK) AI integrations.
+        Software products are developed under the RootBro Software brand.
+      </p>
+
+      <div class="principles">
+        <div class="principle">Simplicity</div>
+        <div class="principle">Privacy</div>
+        <div class="principle">User Control</div>
+        <div class="principle">Practical Utility</div>
+      </div>
+    </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="section">
     <h2>Contact</h2>
-
-    <p style="margin-top:20px; font-size:1.15rem;">
-      <strong>Email:</strong> admin@aibcusa.com
+    <p class="section-intro">
+      For support, business inquiries, or product information, contact AIBC International LLC.
     </p>
 
-    <p style="font-size:1.15rem;">
-      <strong>Business:</strong> partner@aibcusa.com
-    </p>
-    <p style="font-size:1.15rem;">
-     <a href="https://rootbro.com" style="color:#1a2b4c; text-decoration:none;"> Our RootBro software</a>
-    </p>
+    <div class="contact-box">
+      <p><strong>Company:</strong> AIBC International LLC</p>
+      <p><strong>Location:</strong> New York, United States</p>
+      <p><strong>General:</strong> <a href="mailto:admin@aibcusa.com">admin@aibcusa.com</a></p>
+      <p><strong>Business:</strong> <a href="mailto:partner@aibcusa.com">partner@aibcusa.com</a></p>
+      <p><strong>Website:</strong> <a href="https://aibcusa.com">https://aibcusa.com</a></p>
+      <p><strong>Software Brand:</strong> <a href="https://rootbro.com">https://rootbro.com</a></p>
+    </div>
   </section>
+
+  <footer>
+    © 2026 AIBC International LLC. All rights reserved.
+  </footer>
 
 </body>
 </html>
