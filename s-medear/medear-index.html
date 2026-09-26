@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedEar Spanish — Tus papás ya van solos al doctor</title>
+<meta name="description" content="MedEar traduce lo que dice tu doctor al español, explica los términos médicos y guarda la grabación para compartirla en familia. Descarga gratis.">
+<meta property="og:title" content="MedEar Spanish — Tus papás ya van solos al doctor">
+<meta property="og:description" content="Traductor y asistente personal para cada visita al doctor. Descarga gratis en el App Store.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://aibcusa.com/s-medear/shot-1.png">
+<style>
+  :root{
+    --blue:#2f6bff; --blue-dark:#1e4fd6; --ink:#0f172a; --gray:#64748b;
+    --bg:#f8fafc; --card:#ffffff; --radius:20px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header.top{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);
+             border-bottom:1px solid #eef2f7;z-index:10}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;padding:12px 20px}
+  .logo{height:34px}
+  .btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:700;
+       padding:14px 34px;border-radius:999px;font-size:17px;transition:background .2s}
+  .btn:hover{background:var(--blue-dark)}
+  .btn.play{background:var(--ink)}
+  .btn.play:hover{background:#1e293b}
+  .btn.small{padding:10px 22px;font-size:15px}
+  .hero{background:linear-gradient(180deg,#eef4ff 0%,#fff 100%);padding:64px 0 40px;text-align:center}
+  .hero h1{font-size:clamp(32px,6vw,54px);line-height:1.15;letter-spacing:-.5px;margin:18px 0 14px}
+  .hero h1 .hl{color:var(--blue)}
+  .hero p.sub{font-size:clamp(16px,2.6vw,20px);color:var(--gray);max-width:640px;margin:0 auto 28px}
+  .hero .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}
+  .hero .fine{font-size:13px;color:#94a3b8;margin-bottom:36px}
+  .hero-shot{max-width:300px;width:72%;border-radius:28px;box-shadow:0 24px 60px rgba(47,107,255,.22);
+             border:1px solid #e2e8f0}
+  section{padding:64px 0}
+  section.alt{background:var(--bg)}
+  h2.sec{font-size:clamp(26px,4.5vw,36px);text-align:center;letter-spacing:-.3px;margin-bottom:8px}
+  p.sec-sub{text-align:center;color:var(--gray);max-width:620px;margin:0 auto 40px;font-size:17px}
+  .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .card{background:var(--card);border:1px solid #e8eef7;border-radius:var(--radius);padding:28px}
+  .card .ico{font-size:34px;margin-bottom:12px}
+  .card h3{font-size:19px;margin-bottom:8px}
+  .card p{color:var(--gray);font-size:15.5px}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;counter-reset:step}
+  .step{background:var(--card);border:1px solid #e8eef7;border-radius:var(--radius);padding:28px;position:relative}
+  .step .num{display:inline-flex;width:38px;height:38px;border-radius:50%;background:var(--blue);
+             color:#fff;font-weight:800;align-items:center;justify-content:center;margin-bottom:14px}
+  .step h3{font-size:19px;margin-bottom:8px}
+  .step p{color:var(--gray);font-size:15.5px}
+  .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;align-items:start}
+  .shots figure{text-align:center}
+  .shots img{width:100%;max-width:280px;border-radius:24px;border:1px solid #e2e8f0;
+             box-shadow:0 16px 40px rgba(15,23,42,.12)}
+  .shots figcaption{margin-top:12px;color:var(--gray);font-size:15px}
+  .gift{background:linear-gradient(135deg,#2f6bff,#6a3df5);color:#fff;text-align:center;border-radius:28px;
+        padding:56px 28px;margin:0 20px}
+  .gift h2{font-size:clamp(26px,4.5vw,38px);letter-spacing:-.3px;margin-bottom:12px}
+  .gift p{opacity:.92;max-width:560px;margin:0 auto 28px;font-size:17px}
+  .gift .btn{background:#fff;color:var(--blue)}
+  .gift .btn:hover{background:#eef4ff}
+  .final{text-align:center;padding:72px 0}
+  .final h2{font-size:clamp(28px,5vw,40px);margin-bottom:12px;letter-spacing:-.3px}
+  .final p{color:var(--gray);margin-bottom:28px;font-size:17px}
+  footer{border-top:1px solid #eef2f7;padding:28px 0;color:#94a3b8;font-size:14px;text-align:center}
+  footer a{color:#94a3b8}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <img class="logo" src="medear-logo.png" alt="MedEar">
+    <a class="btn small" href="#descargar">Descargar gratis</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Tus papás ya van <span class="hl">solos</span> al doctor</h1>
+    <p class="sub">MedEar traduce lo que dice el doctor al español, explica los términos médicos y guarda la grabación para compartirla en familia.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://apps.apple.com/us/app/medear-spanish/id6776947808">Descargar en App Store</a>
+      <a class="btn play" href="https://play.google.com/store/apps/details?id=com.aibcinternational.medear.spanish">Descargar en Google Play</a>
+    </div>
+    <p class="fine">Gratis · iPhone y Android</p>
+    <img class="hero-shot" src="shot-1.png" alt="MedEar traduce la conversación con tu doctor">
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec">¿Te suena familiar?</h2>
+    <p class="sec-sub">Miles de familias hispanas viven esto cada semana.</p>
+    <div class="grid3">
+      <div class="card">
+        <div class="ico">😟</div>
+        <h3>No entienden al doctor</h3>
+        <p>El inglés médico es difícil. MedEar traduce la conversación al español en el momento, palabra por palabra.</p>
+      </div>
+      <div class="card">
+        <div class="ico">💼</div>
+        <h3>Faltas al trabajo para acompañarlos</h3>
+        <p>Cada cita te cuesta horas. Con MedEar, tus papás van solos y tú recibes la grabación en casa.</p>
+      </div>
+      <div class="card">
+        <div class="ico">🤔</div>
+        <h3>En casa ya nadie se acuerda</h3>
+        <p>¿Qué dijo el doctor? La grabación queda guardada para repasarla en familia, con calma.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2 class="sec">Así de fácil funciona</h2>
+    <p class="sec-sub">Sin inglés, sin complicaciones.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Habla, escribe o toca</h3>
+        <p>Di tus síntomas en español, escríbelos o toca una frase lista: dolor de estómago, dolor de cabeza, fiebre…</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Entiende cada palabra</h3>
+        <p>MedEar traduce la conversación y explica los términos médicos en español sencillo.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Llévalo a casa</h3>
+        <p>Guarda la grabación de la visita y compártela con tu familia. Acompáñalos sin estar presente.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="sec">Como un traductor en tu bolsillo</h2>
+    <p class="sec-sub">Tu asistente personal para cada visita médica.</p>
+    <div class="shots">
+      <figure>
+        <img src="shot-1.png" alt="Entiende lo que dice tu doctor">
+        <figcaption>Entiende lo que dice tu doctor</figcaption>
+      </figure>
+      <figure>
+        <img src="shot-2.png" alt="Comparte la visita con tu familia">
+        <figcaption>Comparte la visita con tu familia</figcaption>
+      </figure>
+      <figure>
+        <img src="shot-3.png" alt="Habla sin saber inglés">
+        <figcaption>Habla sin saber inglés</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="gift">
+    <h2>El mejor regalo para mamá: ir al doctor sin miedo</h2>
+    <p>Descarga MedEar Spanish hoy y que la próxima cita sea diferente.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://apps.apple.com/us/app/medear-spanish/id6776947808">App Store</a>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.aibcinternational.medear.spanish">Google Play</a>
+    </div>
+  </div>
+</div>
+
+<div class="final" id="descargar">
+  <div class="wrap">
+    <h2>Ya no faltes al trabajo</h2>
+    <p>Acompáñalos sin estar presente.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://apps.apple.com/us/app/medear-spanish/id6776947808">Descargar en App Store</a>
+      <a class="btn play" href="https://play.google.com/store/apps/details?id=com.aibcinternational.medear.spanish">Descargar en Google Play</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    © 2026 MedEar · <a href="https://apps.apple.com/us/app/medear-spanish/id6776947808">App Store</a>
+  </div>
+</footer>
+
+</body>
+</html>
