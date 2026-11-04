@@ -1,0 +1,7 @@
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+td.pron{color:#475569;font-style:italic;font-size:15px}
+.alt{color:#475569}
+article h3{font-size:18px;margin:22px 0 6px}
+article h3 .alt{font-weight:500}
+p.lead.alt{font-size:17px}
+@media(max-width:600px){th,td{padding:7px 8px;font-size:14px}td.pron{font-size:13px}}
